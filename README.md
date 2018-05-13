@@ -1,5 +1,6 @@
 Mcrouter Prometheus Exporter
 ===
+[![CircleCI](https://circleci.com/gh/Dev25/mcrouter_exporter.svg?style=svg)](https://circleci.com/gh/Dev25/mcrouter_exporter)
 
 Prometheus exporter for [mcrouter](https://github.com/facebook/mcrouter), a popular memcache router developed by Facebook
 
