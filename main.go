@@ -438,9 +438,17 @@ func getStats(conn net.Conn) (map[string]string, error) {
 			break
 		}
 
+		if line == "" {
+			continue
+		}
+
 		// Split the line into 3 components, anything after the metric name should
 		// be considered as the metric value.
 		result := strings.SplitN(line, " ", 3)
+		if len(result) != 3 {
+			continue
+		}
+
 		value := strings.TrimRight(result[2], "\r\n")
 		m[result[1]] = value
 	}
